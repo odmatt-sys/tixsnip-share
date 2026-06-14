@@ -5,36 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>TixSnip — Shared Collection</title>
 <meta name="description" content="A shared ticket-stub collection on TixSnip." />
-<meta property="og:title" content="TixSnip Collection" />
-<meta property="og:description" content="Browse this ticket-stub collection on TixSnip." />
 <style>
-  :root{
-    --ink:#1E1A4A; --paper:#F0E8D0; --accent:#CE1141; --gold:#D4AF37;
-    --bg:#F5F5F5; --card-radius:14px;
-  }
+  :root{--ink:#1E1A4A;--paper:#F0E8D0;--accent:#CE1141;--gold:#D4AF37;--bg:#F5F5F5;--card-radius:14px;}
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:640px;margin:0 auto;padding:0 16px 48px;}
-  header{position:sticky;top:0;z-index:5;background:var(--ink);
-    padding:calc(env(safe-area-inset-top) + 16px) 16px 16px;color:#fff;}
+  header{position:sticky;top:0;z-index:5;background:var(--ink);padding:calc(env(safe-area-inset-top) + 16px) 16px 16px;color:#fff;}
   .brand{display:flex;align-items:center;gap:8px;justify-content:center;}
-  .brand-logo{width:26px;height:26px;border-radius:7px;background:var(--accent);
-    display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;}
+  .brand-logo{width:26px;height:26px;border-radius:7px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;}
   .brand-name{font-weight:800;letter-spacing:.5px;font-size:18px;}
   .collection-name{text-align:center;font-size:22px;font-weight:900;margin:14px 0 2px;}
   .collection-sub{text-align:center;font-size:13px;color:rgba(255,255,255,.75);}
   .openbar{max-width:640px;margin:14px auto 0;padding:0 16px;}
-  .openbtn{display:flex;align-items:center;justify-content:center;gap:8px;
-    background:var(--accent);color:#fff;font-weight:800;font-size:15px;
-    padding:13px;border-radius:10px;border:none;width:100%;cursor:pointer;letter-spacing:.3px;}
+  .openbtn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;font-weight:800;font-size:15px;padding:13px;border-radius:10px;border:none;width:100%;cursor:pointer;letter-spacing:.3px;}
   .openhint{text-align:center;font-size:12px;color:#8a8597;margin-top:8px;}
-  .center{display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;padding:80px 24px;color:#6b6680;}
-  .spinner{width:34px;height:34px;border:3px solid #ddd;border-top-color:var(--accent);
-    border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:16px;}
+  .center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;color:#6b6680;}
+  .spinner{width:34px;height:34px;border:3px solid #ddd;border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:16px;}
   @keyframes spin{to{transform:rotate(360deg);}}
   .center h2{color:var(--ink);margin:8px 0 6px;font-size:20px;}
   .center p{margin:0;font-size:14px;max-width:320px;line-height:1.5;}
@@ -42,17 +29,11 @@
   .card{border-radius:var(--card-radius);overflow:hidden;position:relative;box-shadow:0 2px 6px rgba(0,0,0,.12);}
   .card.post{border:2.5px solid var(--gold);box-shadow:0 0 10px rgba(212,175,55,.45);}
   .card-grad{padding:18px 18px 18px 86px;min-height:122px;position:relative;}
-  .badge-logo{position:absolute;top:14px;left:14px;width:58px;height:58px;border-radius:29px;
-    display:flex;align-items:center;justify-content:center;font-size:26px;
-    border:1px solid rgba(255,255,255,.6);box-shadow:0 2px 4px rgba(0,0,0,.25);}
-  .post-ribbon{display:inline-block;background:var(--gold);color:var(--ink);
-    font-size:10px;font-weight:900;letter-spacing:.8px;padding:3px 8px;border-radius:4px;margin-bottom:8px;}
-  .etype{font-size:11px;font-weight:700;color:rgba(255,255,255,.85);letter-spacing:1px;margin-bottom:6px;
-    text-shadow:0 1px 2px rgba(0,0,0,.35);}
-  .ctitle{font-size:21px;font-weight:800;color:#fff;line-height:1.25;margin:0 0 10px;
-    text-shadow:0 1px 3px rgba(0,0,0,.4);}
-  .crow{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.95);font-size:13.5px;margin-top:4px;
-    text-shadow:0 1px 2px rgba(0,0,0,.35);}
+  .badge-logo{position:absolute;top:14px;left:14px;width:58px;height:58px;border-radius:29px;display:flex;align-items:center;justify-content:center;font-size:26px;border:1px solid rgba(255,255,255,.6);box-shadow:0 2px 4px rgba(0,0,0,.25);}
+  .post-ribbon{display:inline-block;background:var(--gold);color:var(--ink);font-size:10px;font-weight:900;letter-spacing:.8px;padding:3px 8px;border-radius:4px;margin-bottom:8px;}
+  .etype{font-size:11px;font-weight:700;color:rgba(255,255,255,.85);letter-spacing:1px;margin-bottom:6px;text-shadow:0 1px 2px rgba(0,0,0,.35);}
+  .ctitle{font-size:21px;font-weight:800;color:#fff;line-height:1.25;margin:0 0 10px;text-shadow:0 1px 3px rgba(0,0,0,.4);}
+  .crow{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.95);font-size:13.5px;margin-top:4px;text-shadow:0 1px 2px rgba(0,0,0,.35);}
   .crow svg{flex:0 0 auto;opacity:.95;}
   footer{text-align:center;font-size:12px;color:#9a95a8;margin-top:32px;line-height:1.6;}
   footer a{color:var(--accent);font-weight:700;}
@@ -60,32 +41,24 @@
 </head>
 <body>
   <header>
-    <div class="brand">
-      <div class="brand-logo">T</div>
-      <div class="brand-name">TixSnip</div>
-    </div>
+    <div class="brand"><div class="brand-logo">T</div><div class="brand-name">TixSnip</div></div>
     <div id="collName" class="collection-name" style="display:none;"></div>
     <div id="collSub" class="collection-sub" style="display:none;"></div>
   </header>
   <div id="openbar" class="openbar" style="display:none;">
-    <button class="openbtn" id="openBtn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
-      Open in TixSnip to save these
-    </button>
+    <button class="openbtn" id="openBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Open in TixSnip to save these</button>
     <div class="openhint">Have the app? Tap to add tickets to your own timeline. Don't have it? Browse below.</div>
   </div>
   <div class="wrap">
-    <div id="content">
-      <div class="center"><div class="spinner"></div><p>Loading collection…</p></div>
-    </div>
+    <div id="content"><div class="center"><div class="spinner"></div><p>Loading collection…</p></div></div>
     <footer id="footer" style="display:none;"></footer>
   </div>
-<scr"+"ipt>
+<script>
 var PROJECT='tixsnip';
 var API_KEY='AIzaSyC_byzqRqpHMrBAeNsyWPp2gv1BN19FClo';
 var REST='https://firestore.googleapis.com/v1/projects/'+PROJECT+'/databases/(default)/documents';
 var APP_SCHEME='tixsnip://c/';
-function decode(v){if(v==null)return null;if('stringValue'in v)return v.stringValue;if('integerValue'in v)return Number(v.integerValue);if('doubleValue'in v)return v.doubleValue;if('booleanValue'in v)return v.booleanValue;if('timestampValue'in v)return v.timestampValue;if('nullValue'in v)return null;if('mapValue'in v)return decodeFields(v.mapValue.fields||{});if('arrayValue'in v)return (v.arrayValue.values||[]).map(decode);return null;}
+function decode(v){if(v==null)return null;if('stringValue' in v)return v.stringValue;if('integerValue' in v)return Number(v.integerValue);if('doubleValue' in v)return v.doubleValue;if('booleanValue' in v)return v.booleanValue;if('timestampValue' in v)return v.timestampValue;if('nullValue' in v)return null;if('mapValue' in v)return decodeFields(v.mapValue.fields||{});if('arrayValue' in v)return (v.arrayValue.values||[]).map(decode);return null;}
 function decodeFields(f){var o={};for(var k in f)o[k]=decode(f[k]);return o;}
 async function fetchDoc(path){var res=await fetch(REST+'/'+path+'?key='+API_KEY);if(res.status===404)return null;if(!res.ok)throw new Error('HTTP '+res.status);var json=await res.json();return decodeFields(json.fields||{});}
 var POST_RE=/\b(playoff|championship|super bowl|world series|finals|stanley cup|bowl|march madness|final four|elite eight|sweet 16|wild ?card|alcs|nlcs|alds|nlds|conference final|cfp|college football playoff|regional)\b/;
@@ -102,8 +75,8 @@ function cardHTML(e){var title=e.tournamentName||(e.isMultiEvent?e.title:(e.matc
 function tryOpenApp(id){var url=APP_SCHEME+id;var f=document.createElement('iframe');f.style.display='none';f.src=url;document.body.appendChild(f);setTimeout(function(){try{document.body.removeChild(f);}catch(_){}}, 1500);window.location.href=url;}
 function getShareId(){var h=(location.hash||'').replace(/^#\/?/,'').trim();if(h)return h.split(/[?&/]/)[0];var qs=new URLSearchParams(location.search);return (qs.get('c')||'').trim();}
 function showState(html){document.getElementById('content').innerHTML=html;}
-async function main(){var id=getShareId();if(!id){showState('<div class="center"><h2>No collection specified</h2><p>This link is missing its collection ID. Ask your friend to re-share from the TixSnip app.</p></div>');return;}var meta;try{meta=await fetchDoc('shared_collections/'+encodeURIComponent(id));}catch(err){showState('<div class="center"><h2>Couldn\u2019t load collection</h2><p>Something went wrong reaching TixSnip. Check your connection and try again.</p></div>');return;}if(!meta){showState('<div class="center"><h2>Collection not found</h2><p>This collection may have been unshared, or the link is incomplete. Ask your friend to re-share it from the TixSnip app.</p></div>');return;}var name=meta.displayName||'Shared Collection';var count=(meta.eventCount!=null)?meta.eventCount:null;var nameEl=document.getElementById('collName');var subEl=document.getElementById('collSub');nameEl.textContent=name;nameEl.style.display='block';if(count!=null){subEl.textContent=count+' '+(count===1?'ticket':'tickets');subEl.style.display='block';}var bar=document.getElementById('openbar');bar.style.display='block';document.getElementById('openBtn').addEventListener('click',function(){tryOpenApp(id);});var pageCount=meta.pageCount||1;var events=[];try{for(var i=0;i<pageCount;i++){var page=await fetchDoc('shared_collections/'+encodeURIComponent(id)+'/pages/'+i);if(page&&Array.isArray(page.events))events.push.apply(events,page.events);}}catch(_){}if(events.length===0){showState('<div class="center"><h2>'+esc(name)+'</h2><p>This collection doesn\u2019t have any tickets to show yet.</p></div>');return;}showState('<div class="list">'+events.map(cardHTML).join('')+'</div>');var f=document.getElementById('footer');f.style.display='block';f.innerHTML='Shared from <strong>TixSnip</strong> — your live ticket-stub collection.<br>Scan, relive, and share the games and concerts you\u2019ve been to.';}
+async function main(){var id=getShareId();if(!id){showState('<div class="center"><h2>No collection specified</h2><p>This link is missing its collection ID. Ask your friend to re-share from the TixSnip app.</p></div>');return;}var meta;try{meta=await fetchDoc('shared_collections/'+encodeURIComponent(id));}catch(err){showState('<div class="center"><h2>Could not load collection</h2><p>Something went wrong reaching TixSnip. Check your connection and try again.</p></div>');return;}if(!meta){showState('<div class="center"><h2>Collection not found</h2><p>This collection may have been unshared, or the link is incomplete. Ask your friend to re-share it from the TixSnip app.</p></div>');return;}var name=meta.displayName||'Shared Collection';var count=(meta.eventCount!=null)?meta.eventCount:null;var nameEl=document.getElementById('collName');var subEl=document.getElementById('collSub');nameEl.textContent=name;nameEl.style.display='block';if(count!=null){subEl.textContent=count+' '+(count===1?'ticket':'tickets');subEl.style.display='block';}var bar=document.getElementById('openbar');bar.style.display='block';document.getElementById('openBtn').addEventListener('click',function(){tryOpenApp(id);});var pageCount=meta.pageCount||1;var events=[];try{for(var i=0;i<pageCount;i++){var page=await fetchDoc('shared_collections/'+encodeURIComponent(id)+'/pages/'+i);if(page&&Array.isArray(page.events))events.push.apply(events,page.events);}}catch(_){}if(events.length===0){showState('<div class="center"><h2>'+esc(name)+'</h2><p>This collection does not have any tickets to show yet.</p></div>');return;}showState('<div class="list">'+events.map(cardHTML).join('')+'</div>');var f=document.getElementById('footer');f.style.display='block';f.innerHTML='Shared from <strong>TixSnip</strong> — your live ticket-stub collection.';}
 main();
-</scr"+"ipt>
+</script>
 </body>
 </html>
